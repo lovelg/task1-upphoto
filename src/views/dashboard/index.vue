@@ -3,7 +3,7 @@
     <!-- 为了登录 -->
     <!-- <div class="dashboard-text">{{ name }}</div> -->
       <div class="li">
-      <el-upload class="upload-demo"
+        <el-upload class="upload-demo"
                  ref='ji'
                  action='url'
                  :file-list="list_ji"
@@ -25,8 +25,8 @@
       <span class="Jitxt">集装箱号:</span>
       <span class="Jicontent">{{jinum}}</span>
       </div> 
-
   </div>
+  
 </template>
 
 <script>
@@ -91,7 +91,6 @@ export default {
 
 }
 
-
 </script>
 
 <style lang="scss" scoped>
@@ -114,6 +113,7 @@ span {
   margin-top: 20px;
 }
 .Jitxt{
-  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  font-family:"STKaiti";
+  font-size: 20px;
 }
 </style>
