@@ -22,7 +22,8 @@
                 :src="jiimg"
                 :preview-src-list="srcListJi">
       </el-image>
-      <span>集装箱号:{{jinum}}</span>
+      <span class="Jitxt">集装箱号:</span>
+      <span class="Jicontent">{{jinum}}</span>
       </div> 
 
   </div>
@@ -112,5 +113,7 @@ span {
   text-align: left;
   margin-top: 20px;
 }
-
+.Jitxt{
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
 </style>
