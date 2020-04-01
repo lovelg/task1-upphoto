@@ -66,6 +66,31 @@ export const constantRoutes = [
     ]
   },
 
+  {
+    path: '/reidphototest',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Reidphototest',
+        component: () => import('@/views/ReidPhotoTest/index'),
+        meta: { title: 'Reid', icon: 'tree' }
+      }
+    ]
+  },
+
+  {
+    path: '/photohouse',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'photohouse',
+        component: () => import('@/views/PhotoHouse/index'),
+        meta: { title: '图片库', icon: 'example' }
+      }
+    ]
+  },
 
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }

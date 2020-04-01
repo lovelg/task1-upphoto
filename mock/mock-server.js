@@ -38,6 +38,8 @@ module.exports = app => {
     extended: true
   }))
 
+
+
   const mockRoutes = registerRoutes(app)
   var mockRoutesLength = mockRoutes.mockRoutesLength
   var mockStartIndex = mockRoutes.mockStartIndex
