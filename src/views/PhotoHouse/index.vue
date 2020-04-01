@@ -1,6 +1,17 @@
 <template>
   <div class="app-container">
     <div class="li">
+      <span class="Photohousetxt">
+        图库类型:
+        <el-select v-model="value" placeholder="0">
+          <el-option
+            v-for="item in options"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value"
+          ></el-option>
+        </el-select>
+      </span>
       <el-upload
         class="upload-demo"
         ref="photohouse"
@@ -23,7 +34,6 @@
         :src="photohouseimg"
         :preview-src-list="srcListPhotohouse"
       ></el-image>
-      <!-- <span>封识号:{{fengnum}}</span> -->
       <span class="Photohousetxt">图库号:</span>
       <span class="Photohousecontent">{{photohousenum}}</span>
     </div>
@@ -39,7 +49,30 @@ export default {
       photohouseimg: "",
       srcListPhotohouse: [],
       photohousenum: "",
-      list_photohouse: []
+      list_photohouse: [],
+
+      options: [
+        {
+          value: "选项1",
+          label: "0"
+        },
+        {
+          value: "选项2",
+          label: "1"
+        },
+        {
+          value: "选项3",
+          label: "2"
+        },
+        {
+          value: "选项4",
+          label: "3"
+        },
+        {
+          value: "选项5",
+          label: "4"
+        }
+      ]
     };
   },
 
@@ -100,6 +133,7 @@ span {
 .Photohousetxt {
   font-family: "STKaiti";
   font-size: 20px;
+  padding-bottom: 20px;
 }
 </style>
 
