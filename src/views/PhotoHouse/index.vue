@@ -3,7 +3,7 @@
     <div class="li">
       <span class="Photohousetxt">
         图库类型:
-        <el-select v-model="value" placeholder="0">
+        <el-select v-model="selectoption" placeholder="请选择">
           <el-option
             v-for="item in options"
             :key="item.value"
@@ -42,37 +42,38 @@
 
 <script>
 export default {
-  name: "form",
+  name: 'PhotoHouse',
   data() {
     return {
-      urlphotohouse: "",
-      photohouseimg: "",
+      urlphotohouse: '',
+      photohouseimg: '',
       srcListPhotohouse: [],
-      photohousenum: "",
+      photohousenum: '',
       list_photohouse: [],
-
+      selectoption: "0",
       options: [
         {
-          value: "选项1",
+          value: "0",
           label: "0"
         },
         {
-          value: "选项2",
+          value: "1",
           label: "1"
         },
         {
-          value: "选项3",
+          value: "2",
           label: "2"
         },
         {
-          value: "选项4",
+          value: "3",
           label: "3"
         },
         {
-          value: "选项5",
+          value: "4",
           label: "4"
         }
-      ]
+      ],
+      value: ""
     };
   },
 
@@ -82,7 +83,8 @@ export default {
     },
     handlePhotohouseUpload() {
       const params = {
-        img: this.urlphotohouse
+        img: this.urlphotohouse,
+        appType: this.selectoption
       };
       this.service.postPhotohouse(params).then(res => {
         console.log(res);

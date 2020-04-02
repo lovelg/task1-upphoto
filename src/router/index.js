@@ -54,7 +54,7 @@ export const constantRoutes = [
   },
 
   {
-    path: '/form',
+    path: '/formFeng',
     component: Layout,
     children: [
       {
