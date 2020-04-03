@@ -54,23 +54,23 @@ export default {
       options: [
         {
           value: "0",
-          label: "0"
+          label: "实货监管视图库"
         },
         {
           value: "1",
-          label: "1"
+          label: "散货监管视图库"
         },
         {
           value: "2",
-          label: "2"
+          label: "快件监管视图库"
         },
         {
           value: "3",
-          label: "3"
+          label: "跨境电商监管视图库"
         },
         {
           value: "4",
-          label: "4"
+          label: "旅检重点人员视图库"
         }
       ],
       value: ""
