@@ -70,6 +70,8 @@ export default {
       reader.onload = function(e) {
         that.fengimg = e.target.result
         that.srcListFeng.push(that.fengimg)
+        let index=that.srcListFeng.length-1
+        that.srcListFeng= that.srcListFeng.slice(index).concat(that.srcListFeng.slice(0,index))
         that.urlfeng = e.target.result.split('base64,')[1]
       }
     }

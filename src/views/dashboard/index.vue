@@ -79,6 +79,8 @@ export default {
       reader.onload = function(e) {
         that.jiimg = e.target.result;
         that.srcListJi.push(that.jiimg)
+        let index=that.srcListJi.length-1
+        that.srcListJi= that.srcListJi.slice(index).concat(that.srcListJi.slice(0,index))
         that.urlji = e.target.result.split('base64,')[1]
       }
     }

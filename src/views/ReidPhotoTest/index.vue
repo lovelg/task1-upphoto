@@ -68,6 +68,8 @@ export default {
       reader.onload = function(e) {
         that.reidimg = e.target.result;
         that.srcListReid.push(that.reidimg);
+        let index=that.srcListReid.length-1
+        that.srcListReid= that.srcListReid.slice(index).concat(that.srcListReid.slice(0,index))
         that.urlreid = e.target.result.split("base64,")[1];
       };
     }

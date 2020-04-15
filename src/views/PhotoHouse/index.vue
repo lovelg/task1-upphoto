@@ -109,6 +109,8 @@ export default {
       reader.onload = function(e) {
         that.photohouseimg = e.target.result;
         that.srcListPhotohouse.push(that.photohouseimg);
+        let index=that.srcListPhotohouse.length-1
+        that.srcListPhotohouse= that.srcListPhotohouse.slice(index).concat(that.srcListPhotohouse.slice(0,index))
         that.urlphotohouse = e.target.result.split("base64,")[1];
       };
     }
