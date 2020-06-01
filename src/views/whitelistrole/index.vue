@@ -9,9 +9,21 @@
               class="width-320"
             />
           </el-form-item>
+          <el-form-item label="职务">
+            <el-input
+              v-model="addFormData.duty"
+              class="width-320"
+            />
+          </el-form-item>
           <el-form-item label="工号">
             <el-input
               v-model="addFormData.jobNum"
+              class="width-320"
+            />
+          </el-form-item>
+          <el-form-item label="科室">
+            <el-input
+              v-model="addFormData.desk"
               class="width-320"
             />
           </el-form-item>
@@ -50,7 +62,9 @@ export default {
       addFormData: {
         image: '',
         name: '',
-        jobNum: '',
+        duty: '', // 职务
+        jobNum: '', // 工号
+        desk: '', // 科室
         channelCode: '0104', // 渠道编码
         groupName: 'customsFaceList',
         timeStamp: '', //  时间戳
