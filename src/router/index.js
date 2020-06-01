@@ -92,6 +92,19 @@ export const constantRoutes = [
     ]
   },
 
+  {
+    path: '/whitelistrole',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'whitelistrole',
+        component: () => import('@/views/whitelistrole/index'),
+        meta: { title: '白名单', icon: 'tree' }
+      }
+    ]
+  },
+
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]

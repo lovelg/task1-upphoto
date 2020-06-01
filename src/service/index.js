@@ -12,5 +12,8 @@ export default {
   },
   postPhotohouse(params) {
     return Server.post('/cloudwalk/wisdom/import/image/base', params)
+  },
+  postWhiteListRole(params) {
+    return Server.post('/cloudwalk/customs/aios/customer/face/add', params)
   }
 }
